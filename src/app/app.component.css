@@ -1,0 +1,25 @@
+.tittle{
+    text-align: center;
+}
+/* Estilos para el contenedor principal */
+.d-flex {
+    display: flex;
+  }
+
+  /* Estilos para el sidebar */
+  app-sidebar {
+    width: 280px;
+    height: 100vh;
+  }
+
+  /* Estilos para el contenido */
+  .content {
+    flex: 1;
+    padding: 20px;
+
+  }
+app-footer {
+    position: absolute;
+    bottom: -700px;
+    width: 83%;
+}

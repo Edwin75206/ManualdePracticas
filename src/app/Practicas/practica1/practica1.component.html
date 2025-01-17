@@ -1,0 +1,55 @@
+<style>
+    .p1 {
+        position: center;
+        height: 500px;
+        width: auto;
+    }
+
+    .texto {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 24px;
+        font-weight: lighter;
+    }
+
+    .center {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+</style>
+<!--Practica 01-->
+
+
+
+<div class="container mt-5">
+    <div class="center">
+        <div class="row">
+            <div class="card">
+                <img src="../../../assets/Practica1.5.jpg" class="card-img-top" alt="..." style="width: 500px;">
+                <div class="card-body">
+                    <h5 class="card-title">Practica 1</h5>
+                    <p class="card-text" style="font-size: 15px;">Imagen 1: Unidades temáticas y porcentajes de
+                        evaluación de la materia.</p>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ver imagen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-5" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="row">
+            <div>
+                <img src="../../../assets/Practica1.jpg"
+                    alt="Imagen 1: Unidades temáticas y porcentajes de evaluación de la materia." class="p1" />
+            </div>
+            <div class="modal-footer">
+                <p class="texto">Imagen 1: Unidades temáticas y porcentajes de evaluación de la materia.</p>
+            </div>
+        </div>
+    </div>
+</div>

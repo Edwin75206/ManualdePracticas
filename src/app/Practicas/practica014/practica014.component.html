@@ -1,0 +1,44 @@
+
+<!--Practica 14 Piano-->
+
+<div class="container mt-4"><!-- style="background-color: cadetblue;-->
+   
+    
+    <div class="row">
+        <div class="col-lg-4 mt-5">
+            <div class="d-flex">
+                
+                <div class="piano">
+                      <a [attr.data-key]="'a'" (click)="reproduceSonido('1')" class="list-group-item list-group-item-light">Do</a>
+
+                      <a [attr.data-key]="'s'" (click)="reproduceSonido('2')" class="list-group-item list-group-item-light">Re</a>
+                        <a [attr.data-key]="'q'" (click)="reproduceSonido('11')" class="list-group-item  list-group-item-dark text-white Db4-key">Reb</a>
+
+                        <a [attr.data-key]="'d'" (click)="reproduceSonido('3')" class="list-group-item  list-group-item-light">Mi</a>
+
+                        <a [attr.data-key]="'f'" (click)="reproduceSonido('4')" class="list-group-item  list-group-item-light">Fa</a>
+
+                        <a [attr.data-key]="'g'" (click)="reproduceSonido('5')" class="list-group-item  list-group-item-light">Sol</a>
+                        <a [attr.data-key]="'h'" (click)="reproduceSonido('6')" class="list-group-item  list-group-item-light">La</a>
+                        <a [attr.data-key]="'j'" (click)="reproduceSonido('7')" class="list-group-item  list-group-item-light">Si</a>
+                        <a [attr.data-key]="'w'" (click)="reproduceSonido('12')" class="list-group-item list-group-item-action list-group-item-dark text-white Eb4-key">Mib</a>
+
+
+                        <a [attr.data-key]="'e'" (click)="reproduceSonido('13')" class="list-group-item list-group-item-action list-group-item-dark text-white Gb4-key">Solb</a>
+
+
+                        <a [attr.data-key]="'r'" (click)="reproduceSonido('14')" class="list-group-item list-group-item-action list-group-item-dark text-white Ab4-key">Lab</a>
+
+
+                        <a [attr.data-key]="'r'" (click)="reproduceSonido('15')" class="list-group-item list-group-item-action list-group-item-dark text-white Db5-key">Sib</a>
+
+
+                </div>
+                
+
+                
+                </div>            
+        </div>
+        
+    </div>
+</div>

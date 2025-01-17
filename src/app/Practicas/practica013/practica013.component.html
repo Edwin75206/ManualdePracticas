@@ -1,0 +1,91 @@
+
+<!--Practica 13: *ngSwitch-->
+
+<div class="container mt-4">
+  
+  <div class="row">
+    <div class="col-11">
+      <h1>Lista de Estudiantes</h1>
+    </div>
+    <!--EVENT BINDING-->
+    <div class="col-1">
+      <button class="btn btn-primary ml-auto btn-sm" (click)="mostrarEstudiantes()">{{texto}}</button>
+    </div>
+    <table class="table" *ngIf="estudiantesVisibles">
+      <thead>
+        <th>Matricula</th>
+        <th>Nombre</th>
+        <th>Carrera</th>
+        <th>Grado y Grupo</th>
+        <th>Situación Academica</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Estudiantes of listaEstudiantes" [ngSwitch]="Estudiantes.carrera">
+          <td>{{Estudiantes.matricula}}</td>
+          <td>{{Estudiantes.nombre}}</td>
+          <td>
+
+<!--<td> <span [ngClass]="Estudiantes.situacionacademica=='Regular'?
+                'badge bg-success':Estudiantes.situacionacademica=='Caso Critico'?'badge bg-danger'
+                :'badge bg-warning'">{{Estudiantes.situacionacademica}}</span></td>-->
+
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " 
+             *ngSwitchCase="'TSU PAL'" [icon]="faTractor"></fa-icon>
+
+
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU QAB'" [icon]="faCarrot"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU AACH'" [icon]="faBusinessTime"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU TIEVND'" [icon]="faPenToSquare"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU OCEANI'" [icon]="faTruckPlane"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU MAA'" [icon]="faRobot"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU SA'" [icon]="faAutomobile"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU MAI'" [icon]="faIndustry"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU MAP'" [icon]="faGasPump"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'LIC TFAR'" [icon]="faPersonBreastfeeding"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU DSM'" [icon]="faLaptop"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU ASP'" [icon]="faDna"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' "*ngSwitchCase="'TSU GASTRO'" [icon]="faBowlFood"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'ING ASP'" [icon]="faDna"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'ING BIO'" [icon]="faCarrot"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'ING PAL'" [icon]="faTractor"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'LIC MECA'" [icon]="faRobot"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'ING MA'" [icon]="faIndustry"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'LIC FT'" [icon]="faPersonBreastfeeding"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'ING DGS'" [icon]="faLaptop"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'ING EVND'" [icon]="faPenToSquare"></fa-icon>
+            <fa-icon [ngClass]="Estudiantes.carrera.includes('TSU')?'text-success':'text-primary' " *ngSwitchCase="'LIC GCH'" [icon]="faBusinessTime"></fa-icon>
+
+            {{Estudiantes.carrera}}
+            <!--
+                    <fa-icon [ngStyle]="{'color':Estudiantes.carrera=='TSU PAL'?
+                    'green':Estudiantes.carrera=='TSU EVND'?'red':'gold'}"  *ngSwitchCase="'TSU PAL'"  [icon]="faLaptop" > </fa-icon> &nbsp;  
+                    <fa-icon *ngSwitchCase="'TSU EVND'" [icon]="faCoffee"></fa-icon> &nbsp;  {{Estudiantes.carrera}}-->
+
+          </td>
+          <!--INTERPOLACION-->
+          <td>{{Estudiantes.gradoygrupo}}</td>
+          <td> <span [ngClass]="Estudiantes.situacionacademica=='Regular'?
+                'badge bg-success':Estudiantes.situacionacademica=='Caso Critico'?'badge bg-danger'
+                :'badge bg-warning'">{{Estudiantes.situacionacademica}}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Datos Importantes</h5>
+        <i class="fa-solid fa-utensils"></i>
+        <p class="card-text">La directiva <strong>*ngSwitch</strong> es una parte fundamental de Angular, un popular framework 
+          de desarrollo web. Permite realizar una selección condicional de elementos <strong> HTML</strong> en función del valor 
+          de una expresión. En otras palabras, ngSwitch se utiliza para mostrar diferentes secciones de 
+          contenido en una plantilla de Angular según el valor de una variable o expresión en el componente.
+        </p>
+        <a href="#" routerLink="/practica012"   class="card-link" >Practica anterior</a>
+        <a href="#"  routerLink="/practica014" class="card-link" >Practica siguiente</a>
+
+      </div>
+    </div>
+  </div>
+</div>

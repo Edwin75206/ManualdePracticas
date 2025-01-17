@@ -1,0 +1,6 @@
+.container{
+    background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #ff5c67, #09000e, #05d1ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #fac2c5, #9f00ee, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

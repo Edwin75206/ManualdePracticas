@@ -1,0 +1,58 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark fill" id="side" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center  mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi " width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4">Frameworks de Desarrollo Web</span>
+    </a>
+    <hr>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Unidad 1: Desarrollo de FrontEnd
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><strong>Objetivo:</strong>El alumno construira interfaces web responsivas
+                    para mejorar la experiencia del usuario.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Unidad 2: Desarrollo de BackEnd
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"><strong>Objetivo:</strong>El alumno desarrollara aplicaciones web utilizando
+                    Frameworks, para solucionar necesidades del cliente.</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="pag">
+        - {{pagina}} -
+    </div>
+    <div class="center">
+    {{mensaje}}
+
+    <hr>
+    <div>
+            <button routerLink="{{before}}" type="button" class="btn btn-outline-light mt4">Practica anterior
+            </button>
+            <button routerLink="{{next}}"  type="button" class="btn btn-outline-light mt-2">Practica
+                siguiente</button>
+        </div>
+     </div>
+
+     <hr>
+     <app-profile></app-profile>
+</div>
+
+

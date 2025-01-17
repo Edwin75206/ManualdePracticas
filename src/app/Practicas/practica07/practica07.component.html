@@ -1,0 +1,29 @@
+
+      <!--Practica 7: Event binding-->
+  
+      <div class="container mt-4">
+        
+      <h1>{{texto}}</h1>
+      <br>
+  
+      <button  class="btn btn-primary" (click)="cambiaTexto()">Da click aqui</button>
+      <br>
+      <hr>
+      <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Datos Importantes</h5>
+            <p class="card-text">Para poder vincular las funcionalidades declaradas en los archivos
+              de TypeScript (.TS) del componente con los eventos detonados por el Usuario en su interaccion
+              con la UI (Interfaz), utilizaremos los paréntesis y el tipo de evento que invocara a nuestros métodos
+              declarados
+              <strong>{{'(event)="function()"'}}</strong>,dentro de las propiedades
+              del elemento HTML
+            </p>  
+            <a href="#" routerLink="/practica6"   class="card-link" >Practica anterior</a>
+            <a href="#"  routerLink="/practica08" class="card-link" >Practica siguiente</a>
+            
+          </div>
+        </div>
+      </div>
+      </div>

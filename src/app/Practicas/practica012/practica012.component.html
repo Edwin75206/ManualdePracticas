@@ -1,0 +1,55 @@
+
+    <!--Practica 12: *ngClass-->
+
+    <div class="container mt-4" >
+      
+        <div class="row">
+          <div class="col-11">
+          <h1>Lista de Estudiantes</h1>
+        </div>
+        <!--EVENT BINDING-->
+        <div class="col-1">
+          <button class="btn btn-primary ml-auto btn-sm"  (click)="mostrarEstudiantes()">{{texto}}</button>
+        </div>
+          <table class="table" *ngIf="estudiantesVisibles">
+            <thead>
+              <th>Matricula</th>
+              <th>Nombre</th>
+              <th>Carrera</th>
+              <th>Grado y Grupo</th>
+              <th>Situación Academica</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Estudiantes of listaEstudiantes">
+                <td>{{Estudiantes.matricula}}</td>
+                <td>{{Estudiantes.nombre}}</td>
+                <td>{{Estudiantes.carrera}}</td>  
+                <!--INTERPOLACION-->
+                <td>{{Estudiantes.gradoygrupo}}</td>
+                <td> <span [ngClass]="Estudiantes.situacionacademica=='Regular'?
+                'badge bg-success':Estudiantes.situacionacademica=='Caso Critico'?'badge bg-danger'
+                :'badge bg-warning'">{{Estudiantes.situacionacademica}}</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+      <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Datos Importantes</h5>
+            <p class="card-text">La directiva <strong>*ngClass</strong> es la directiva que nos permiteasignar un conjunto
+              de caracteristicas de estilos agrupadas en una clase <strong>(class)</strong>, dentro de nuestras
+              hojas de estilo <strong>(.CSS)</strong>, para este caso las utilizadas por la libreria de Bootstrap
+              , a los elementos que conforman los componentes de la Interfáz Gráfica de la aplicación web.
+            </p>  
+            <a href="#" routerLink="/practica011"   class="card-link" >Practica anterior</a>
+            <a href="#"  routerLink="/practica013" class="card-link" >Practica siguiente</a>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+  
+  
+  

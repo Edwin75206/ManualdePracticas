@@ -1,0 +1,26 @@
+.badge{
+    margin: 10px;
+    font-size: 120%;
+}
+
+label {
+    font-size: 120%;
+    font-weight: bold; 
+    background-color: rgba(240, 248, 255, .5);
+    border: 2px solid rgb(110, 219, 247);
+    padding: 10px 100px;
+    text-align: right;
+    border-radius: 15px;
+}
+
+.etiquetas label{
+    text-align: left;
+}
+
+body{
+    background-image: url(../../../assets/bitcoin.jpg);
+    background-image: linear-gradient(100deg, #0000,#000020), url('../../../assets/bitcoin.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 88vh;
+}

@@ -1,0 +1,29 @@
+
+      <!--Practica 8: Two Day data binding-->
+  
+      <div class="container mt-4" style="background-color: {{texto}};">
+        
+        
+        <input type="text" class="form-control" placeholder="Escribe algo aqui!"
+        [(ngModel)]="texto">
+        <br>
+        <p>{{texto}}</p>
+        <br>
+      <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Datos Importantes</h5>
+            <p class="card-text">La vinculación a 2 vías {{'('}} Two Way Data Binding {{')'}}
+              ,sincroniza los datos ingresados por el Usuario en la Interfaz <strong>{{'(.HTML)'}}</strong>
+              y aquellos que se encuentran declarados en la cache del componente, para ello se utilizara la 
+              librería de <strong>ngModel</strong>, mismo que debemos anexar al archivo
+              del componente principal de nuestro proyecto de Angular <strong>app.module.ts</strong>,por ultimo 
+              lo incorporamos a nuestro HTML utilizando: <strong>{{'[(ngModel)]'}}= variable</strong>
+            </p>  
+            <a href="#" routerLink="/practica07"   class="card-link" >Practica anterior</a>
+            <a href="#"  routerLink="/practica09" class="card-link" >Practica siguiente</a>
+            
+          </div>
+        </div>
+      </div>
+      </div>

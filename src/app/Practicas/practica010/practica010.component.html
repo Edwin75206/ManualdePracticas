@@ -1,0 +1,51 @@
+
+    <!--Practica 10: *ngIf-->
+
+    <div class="container mt-4" >
+      
+      <div class="row">
+        <div class="col-11">
+        <h1>Lista de Estudiantes</h1>
+      </div>
+      <!--EVENT BINDING-->
+      <div class="col-1">
+        <button class="btn btn-primary ml-auto btn-sm" (click)="mostrarEstudiantes()">{{texto}}</button>
+      </div>
+        <table class="table" *ngIf="estudiantesVisibles">
+          <thead>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Carrera</th>
+            <th>Grado y Grupo</th>
+            <th>Situación Academica</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Estudiantes of listaEstudiantes">
+              <td>{{Estudiantes.matricula}}</td>
+              <td>{{Estudiantes.nombre}}</td>
+              <td>{{Estudiantes.carrera}}</td>  
+              <!--INTERPOLACION-->
+              <td>{{Estudiantes.gradoygrupo}}</td>
+              <td>{{Estudiantes.situacionacademica}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+    <div class="row">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Datos Importantes</h5>
+          <p class="card-text">La directiva <strong>*ngIf</strong> es una operación que nos permite realizar
+            cambios en estructura, estilización o visualización de componentes en base a un valor booleano, el cual 
+            puede ser verdadero <strong>(true)</strong> o falso <strong>(false)</strong> que deriva de una validación.
+          </p>  
+          <a href="#" routerLink="/practica09"   class="card-link" >Practica anterior</a>
+          <a href="#"  routerLink="/practica011" class="card-link" >Practica siguiente</a>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+
+

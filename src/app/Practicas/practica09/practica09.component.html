@@ -1,0 +1,44 @@
+
+    <!--Practica 09: *ngFor-->
+
+    <div class="container mt-4" >
+      
+      <div class="row">
+        <h1>Lista de Estudiantes</h1>
+        <br>
+        <table class="table">
+          <thead>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Carrera</th>
+            <th>Grado y Grupo</th>
+            <th>Situación Academica</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Estudiantes of listaEstudiantes">
+              <td>{{Estudiantes.matricula}}</td>
+              <td>{{Estudiantes.nombre}}</td>
+              <td>{{Estudiantes.carrera}}</td>
+              <td>{{Estudiantes.gradoygrupo}}</td>
+              <td>{{Estudiantes.situacionacademica}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br>
+    <div class="row">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Datos Importantes</h5>
+          <p class="card-text">La directiva <strong>*ngFor</strong> nos permite realizar tareas simples de 
+            manera repetitiva, para poder adaptar nuestra interfaz a las necesidades de los usuarios y los
+            datos e informacion a presentar, en este caso se imprimen los datos de una lista de Estudiantes
+            definidos de la logica de un archivo funcional <strong>(.ts)</strong>
+          </p>  
+          <a href="#" routerLink="/practica08"   class="card-link" >Practica anterior</a>
+          <a href="#"  routerLink="/practica010" class="card-link" >Practica siguiente</a>
+          
+        </div>
+      </div>
+    </div>
+    </div>

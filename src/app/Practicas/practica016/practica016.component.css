@@ -1,0 +1,98 @@
+.p1{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.p1{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #25305E;
+    color: #EDEFF1;
+    height: 80vh;
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.row{
+    margin-top: 20px;
+}
+
+.fondo-item{
+background-color: #ff111328;
+height: 130px;
+border-radius: 20px;
+color: white;
+}
+
+
+
+.btn-color{
+    background-color: #f12e5f;
+    border-color: #f12e5f;
+    border-radius: 25px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.btn-color:hover{
+    background-color: #b13151;
+    border-color: #b13151;
+}
+
+.genero{
+    font-size: 40px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.estiloNumero{
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: -30px;
+}
+
+.unidades{
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+#altura{
+    padding: 0 20px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    background: #f12e5f;
+}
+
+.botones{
+    cursor: pointer;
+    background-color: #ff4c4f5e;
+    padding: 7px;
+    border-radius: 15px;
+    margin-left: 3px;
+    font-size: 18px;
+}
+
+.generoActivoM{
+    background-color: #347a8b;
+}
+
+.generoActivoF{
+    background-color: rgb(187, 66, 151)
+}
+

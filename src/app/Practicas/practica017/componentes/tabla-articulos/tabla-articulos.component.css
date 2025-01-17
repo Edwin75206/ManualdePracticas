@@ -1,0 +1,12 @@
+.pic{
+    width: 100px;
+    height:100px;
+    object-fit: contain;
+}
+
+.producto{
+    background-color: aqua;
+}
+.text-center{
+    text-align: center;
+}

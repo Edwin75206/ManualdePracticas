@@ -1,0 +1,117 @@
+.container-fluid {
+    background-color: #023535;
+    margin-top: -20px;
+    height: 120vh;
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    font-family: "Roboto Condensed";
+    
+}
+
+.row {
+    margin: 20px;
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.fondoItem {
+    background-image: linear-gradient(250deg,#0000,#000020),var(--imagen-de-fondo); 
+    background-size: cover; 
+    background-position: center center;
+    opacity: 0.7;
+    border-radius: 20px;
+    color: white;
+}
+
+.btn-color {
+background-color: #2E6EA6;
+border-color: #2E6EA6;
+border-radius: 25px;
+width: 100%;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.genero {
+    font-size: 20px;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.estilo-numero {
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: -20px;
+}
+
+.unidades {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+#altura {
+    padding: 0px 20px;
+    padding-bottom: 10px;
+    width: 95%;
+}
+
+input[type="range"]::-webkit-slider-thumb{background: #1114b3;}
+
+.botones {
+    cursor: pointer;
+    background: #137e36;
+    padding: 5px;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+  
+.fa-fw {
+    font-weight: bold;
+}
+
+.generoActivoM {
+    background-color: rgb(25, 0, 252);
+}
+
+.generoActivoF {
+    background-color: rgb(252, 0, 168);
+}
+
+.resultado {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.estiloNumero {
+    font-size: 80px;
+    font-weight: bolder;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.calcula{
+    
+    font-family: 'Agbalumo';
+}
+
+.texto{
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

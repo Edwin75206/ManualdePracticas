@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="fondoItem genero" [ngClass]="{'generoActivoM':genero==='Masculino'} ">
+                        <div class="contenedor" style=cursor:pointer; (click)="cambioGenero('Masculino')">
+
+                            <i class="fa-solid"></i>
+                            <fa-icon [icon]="faMars" class="icon"></fa-icon>
+                            <p>Masculino</p> 
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="fondoItem genero" [ngClass]="{'generoActivoF':genero==='Femenino'}">
+                        <div class="contenedor" style = cursor:pointer; (click)="cambioGenero('Femenino')">
+                            <i class="fa-solid"></i>
+                            <fa-icon [icon]="faVenus" class="icon"></fa-icon>
+                            <p>Femenino</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="fondoItem ">
+                        <div class="contenedor">
+                            <p>Altura</p>
+                            <p class="estiloNumero">{{altura| number:'0.2'}}<span class="unidades">cm.</span>
+                                
+                            </p>
+                            <input type="range" class="form-range" id="altura" [value]="altura" (input)="cambiaAltura($event)" step=".01" min=".5" max="2.30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="fondoItem">
+                        <div class="contenedor">
+                            <p>Peso</p>
+                            <p class="estiloNumero">{{peso}}<span class="unidades">kg.</span></p>
+                            <div>
+                                <fa-icon [icon]="faMinus" class="botones" (click)="peso = peso - 1"></fa-icon>
+                                <fa-icon [icon]="faPlus" class="botones" (click)="peso = peso + 1"></fa-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="fondoItem">
+                        <div class="contenedor">
+                            <p>Edad</p>
+                            <p class="estiloNumero">{{edad}}<span class="unidades">años</span> </p>
+                            <div>
+                                <fa-icon [icon]="faMinus" class="botones" (click)="edad = edad - 1" ></fa-icon>
+                                <fa-icon [icon]="faPlus" class="botones" (click)="edad = edad + 1" ></fa-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button (click)="calculaIMC()"  class="btn btn-primary btn-lg btn-block btn-color calcula">CALCULAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

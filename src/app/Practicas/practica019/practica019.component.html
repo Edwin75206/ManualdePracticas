@@ -1,0 +1,6 @@
+<app-navbarnoticias [titulo]="'Buscador de Noticias'"  ></app-navbarnoticias>
+<div class="card bg-black text-white" style="height: 140vh; overflow-y: auto;">
+  <app-formulario (parametrosSeleccionados)="buscarNoticias($event)"></app-formulario>
+  <app-spinner *ngIf="loading"></app-spinner>
+  <app-listado-noticias [listNoticias]="listNoticias" ></app-listado-noticias>
+</div>

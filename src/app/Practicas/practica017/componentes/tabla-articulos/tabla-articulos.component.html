@@ -1,0 +1,50 @@
+<div class="content2">
+
+
+  <div class="container border border-3 border-secondary rounded-3">
+      <div class="row">
+          <div class="card">
+              <div class="card-body">
+                  <p>Lista Productos Actual: {{categoriaSeleccionada}}</p>
+              </div>
+          
+
+
+      <div class="table-wrap" id="table-wrap1">
+          <table class="table table-responsive table-borderless">
+              <thead class="producto">
+                  <th>&nbsp;</th>
+                  <th class="text-center ">Producto</th>
+                  <th class="text-center ">Marca</th>
+                  <th class="text-center">Precio</th>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let producto of listaProductos; let i = index" >
+                <tr  *ngIf="categoriaSeleccionada=='Todas' || categoriaSeleccionada==producto.categoria ">
+                    <td class="text-center"><img class="pic" [src]="'../../../../../assets/Articulos/' + (i + 1) + '.jpg'"></td>
+                      <td>
+                          <div>
+                            <p class="m-0 fw-bold">{{ producto.nombre }}</p>
+                            <p class="m-0 text-muted">{{ producto.descripcion }}</p>
+                          </div>
+                      </td>
+                      <td>
+                        <div class="fw-600 text-muted text-center">{{ producto.marca }}
+                          </div>
+                      </td>
+                      <td>
+                          <div class="fw-800 fw-bold text-center">
+                              ${{producto.precio}}
+                          </div>
+                      </td>
+
+                  </tr>
+                </ng-container>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+      </div>
+  </div>
+</div>

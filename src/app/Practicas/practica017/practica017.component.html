@@ -1,0 +1,20 @@
+<div class="container" style="height: 140vh; overflow-y: auto;">
+<div class="container-fluid">
+    <app-filtro
+    [totalProductos]="calcularTotalProductos()"
+    [totalElectronicos]="calcularTotalCategorias('Electrónicos')"
+    [totalRopa]="calcularTotalCategorias('Ropa')"
+    [totalJuguetes]="calcularTotalCategorias('Juguetes')"
+    [totalAlimentos]="calcularTotalCategorias('Alimentos')"
+    [totalBebidas]="calcularTotalCategorias('Bebidas')"
+    [categoriaSeleccionada]="this.categoriaSeleccionada"
+    (emisorcambioCategoria)="escuchaCambiaCategoria($event)"
+    >
+    </app-filtro>
+    <app-tabla-articulos
+    [listaProductos]="this.listaProductos"
+    [categoriaSeleccionada]="this.categoriaSeleccionada"
+    >
+    </app-tabla-articulos>
+</div>
+</div>
